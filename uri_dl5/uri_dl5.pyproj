@@ -4,7 +4,7 @@
     <SchemaVersion>2.0</SchemaVersion>
     <ProjectGuid>c9637c4a-037a-4f1f-8908-e23ffd181e91</ProjectGuid>
     <ProjectHome>.</ProjectHome>
-    <StartupFile>uri_dl5.py</StartupFile>
+    <StartupFile>uri_dl5_ex1.py</StartupFile>
     <SearchPath>
     </SearchPath>
     <WorkingDirectory>.</WorkingDirectory>
@@ -21,10 +21,45 @@
     <EnableUnmanagedDebugging>false</EnableUnmanagedDebugging>
   </PropertyGroup>
   <ItemGroup>
+    <Compile Include="unit10\b_utils.py" />
+    <Compile Include="unit10\c1w2_utils.py" />
+    <Compile Include="unit10\c1w3_utils.py" />
+    <Compile Include="unit10\c1w4_utils.py" />
+    <Compile Include="unit10\c1w5_utils.py" />
+    <Compile Include="unit10\c2w1_init_utils.py" />
+    <Compile Include="unit10\c2w1_testCases.py" />
+    <Compile Include="unit10\c2w1_utils.py" />
+    <Compile Include="unit10\c2w2_utils.py" />
+    <Compile Include="unit10\c2w3_tf_utils.py" />
     <Compile Include="uri_dl5.py" />
     <Compile Include="uri_dl5_ex1.py">
       <SubType>Code</SubType>
     </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="requirements.txt" />
+    <Content Include="unit10\dataB1W3Ex2.xlsx" />
+    <Content Include="unit10\datasets\cat_nocat\test_catvnoncat.h5" />
+    <Content Include="unit10\datasets\cat_nocat\train_catvnoncat.h5" />
+    <Content Include="unit10\datasets\data.mat" />
+    <Content Include="unit10\Raccoon.png" />
+    <Content Include="unit10\trainN - Sample-data-sets-for-linear-regression1.xlsx" />
+    <Content Include="unit10\__pycache__\c1w2_utils.cpython-36.pyc" />
+    <Content Include="unit10\__pycache__\c1w3_utils.cpython-36.pyc" />
+    <Content Include="unit10\__pycache__\c1w4_utils.cpython-36.pyc" />
+    <Content Include="unit10\__pycache__\c2w1_init_utils.cpython-36.pyc" />
+    <Content Include="unit10\__pycache__\c2w1_reg_utils.cpython-36.pyc" />
+    <Content Include="unit10\__pycache__\c2w1_testCases.cpython-36.pyc" />
+    <Content Include="unit10\__pycache__\c2w1_utils.cpython-36.pyc" />
+    <Content Include="unit10\__pycache__\c2w2_opt_utils.cpython-36.pyc" />
+    <Content Include="unit10\__pycache__\c2w2_testCases.cpython-36.pyc" />
+    <Content Include="unit10\__pycache__\c2w2_utils.cpython-36.pyc" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="unit10\" />
+    <Folder Include="unit10\datasets\" />
+    <Folder Include="unit10\datasets\cat_nocat\" />
+    <Folder Include="unit10\__pycache__\" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\Python Tools\Microsoft.PythonTools.targets" />
   <!-- Uncomment the CoreCompile target to enable the Build command in

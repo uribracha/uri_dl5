@@ -1,0 +1,3 @@
+NumPy
+matplotlib
+h5py
