@@ -5,7 +5,7 @@ import random
 random.seed(1)
 X, Y = u10. load_dataB1W3Ex1()
 plt.plot(X,Y,'b.')
-def price(x,y):
+def plot(x,y):
     line=(max(x),min(x))
 
     alist=[]
@@ -14,9 +14,13 @@ def price(x,y):
       
         alist.append(random.randrange(-20,20))
         blist.append(random.randrange(-20,20))
-
     for i in range(len(alist)):
         plt.plot(line,[line[0]*alist[i]+blist[i],line[1]*alist[i]+blist[i]])
     plt.show()
 
-price(X,Y)
+
+#def findbestparam(x,y,learningrate=0.01,epoch=1000):
+   # a=np.arange(-20,21)
+   # b=np.arange(-20,21)
+   #print( a*x+b)
+plot(X,Y)
