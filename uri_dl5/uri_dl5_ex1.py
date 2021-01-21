@@ -18,9 +18,28 @@ def plot(x,y):
         plt.plot(line,[line[0]*alist[i]+blist[i],line[1]*alist[i]+blist[i]])
     plt.show()
 
+   
+def findab(x,y):
+    alist=[]
+    blist=[]
+    for _ in range(10):
+        alist.append(random.randrange(-20,20))
+        blist.append(random.randrange(-20,20))
+       
+    min=0
+    indexmin=-1
+   
+    for i in range(len(alist)):
+        sum=0
+        for j in range(len(x)):
+            sum+=(x[j]*alist[i]+blist[i]-y[j])**2
+        z=sum/len(x)
+        if (indexmin==-1):
+            min=z
+            indexmin=i
+        elif (min>z):
+            min=z
+            indexmin=i
 
-#def findbestparam(x,y,learningrate=0.01,epoch=1000):
-   # a=np.arange(-20,21)
-   # b=np.arange(-20,21)
-   #print( a*x+b)
-plot(X,Y)
+    print("a={0} , b={1} , cost={2}".format(alist[indexmin],blist[indexmin],min))
+findab(X,Y)

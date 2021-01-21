@@ -1,3 +1,4 @@
 NumPy
 matplotlib
 h5py
+sympy
