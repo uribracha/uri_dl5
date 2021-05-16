@@ -1,7 +1,12 @@
-import unit10.b_utils as u10
 import matplotlib.pyplot as plt
-import random 
+import numpy as np
+import random
+import unit10.b_utils as u10
 
+
+
+def Li(a, b, xi, yi):
+    return (a*xi+b-yi)**2
 
 def calc_J(X, Y, a, b):
     m = len(Y)
@@ -14,29 +19,36 @@ def calc_J(X, Y, a, b):
         sumDb += 2*(a*X[i]+b-Y[i])
     return sumJ/m, sumDa/m, sumDb/m
 
-def train_adaptive(x,y,alpha, epocs, MyFunc):
-    a,b=(random.randrange(-10,10),random.randrange(-10,10))
-    a_Alpha=alpha
-    B_alpha=alpha
+
+def train_adaptive(X, Y, alpha, epocs, MyFunc):
+
+    a_min = random.randrange(-10,10)    # gues the minimum
+    b_min = random.randrange(-10,10)    # gues the minimum
+
+    alpha_a = alpha
+    alpha_b = alpha
     for i in range (epocs):
-        sumj, sumda,sumdb = MyFunc(x,y,a,b)
-        if (sumj*a_Alpha<0): 
-           a_Alpha*= 1.1   
-        else:
-            a_Alpha *= -0.5 
+        Fx, Fda, Fdb = MyFunc(X, Y, a_min, b_min)
 
-        if (sumj*B_alpha<0): 
-            B_alpha*= 1.1   
+        if (Fda*alpha_a<0): 
+            alpha_a *= 1.1    # stay same direction
         else:
-            B_alpha *= -0.5 
+            alpha_a *= -0.5   # change direction
+        a_min += np.abs(Fda)*alpha_a
 
-        a +=np.abs(sumj)*a_Alpha
-        b+=np.abs(sumj)*B_alpha
-        Fx, Fdx = MyFunc(x,y,a,b)
-    return  Fx,a,b
+        if (Fdb*alpha_b<0): 
+            alpha_b *= 1.1    # stay same direction
+        else:
+            alpha_b *= -0.5   # change direction
+        b_min += np.abs(Fdb)*alpha_b
+    
+    return Fx, a_min, b_min
+
 
 X, Y = u10.load_dataB1W3Ex1()
-J, a, b = train_adaptive(X, Y, 0.001, 1000, calc_J)
+J, a, b = train_adaptive(X, Y, 0.1, 1000, calc_J)
+
+
 print('J='+str(J)+', a='+str(a)+", b="+str(b))
 plt.plot(X, Y, 'r.')
 plt.plot([0,100],[a*0+b, 100*a+b])

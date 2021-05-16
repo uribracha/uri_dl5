@@ -4,13 +4,14 @@
     <SchemaVersion>2.0</SchemaVersion>
     <ProjectGuid>c9637c4a-037a-4f1f-8908-e23ffd181e91</ProjectGuid>
     <ProjectHome>.</ProjectHome>
-    <StartupFile>uri_Dl5_e6.py</StartupFile>
+    <StartupFile>TestDl2.py</StartupFile>
     <SearchPath>
     </SearchPath>
     <WorkingDirectory>.</WorkingDirectory>
     <OutputPath>.</OutputPath>
     <Name>uri_dl5</Name>
     <RootNamespace>uri_dl5</RootNamespace>
+    <SuppressEnvironmentCreationPrompt>True</SuppressEnvironmentCreationPrompt>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)' == 'Debug' ">
     <DebugSymbols>true</DebugSymbols>
@@ -21,11 +22,41 @@
     <EnableUnmanagedDebugging>false</EnableUnmanagedDebugging>
   </PropertyGroup>
   <ItemGroup>
+    <Compile Include="3120-ex1.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="3150__ex.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="deeplearning_3040_ex1.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="deeplearning_3030_ex1.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="DL1.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="DL5-EX7.py">
+      <SubType>Code</SubType>
+    </Compile>
     <Compile Include="dl5_ex3.py">
       <SubType>Code</SubType>
     </Compile>
+    <Compile Include="positron.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="PositronClass.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="TestDL1.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="TestDl2.py">
+      <SubType>Code</SubType>
+    </Compile>
     <Compile Include="Tichonet_DL5_2340_Ex2.py" />
-    <Compile Include="Tichonet_DL5_2350_Ex1.py" />
+    <Compile Include="Tichonet_DL5_2350_Ex1 - Copy.py" />
     <Compile Include="unit10\b_utils.py" />
     <Compile Include="unit10\c1w2_utils.py" />
     <Compile Include="unit10\c1w3_utils.py" />
@@ -52,6 +83,12 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="images\car.jpg" />
+    <Content Include="images\cat1.png" />
+    <Content Include="images\dog and cat.jpg" />
+    <Content Include="images\dog1.png" />
+    <Content Include="images\נמר.jpg" />
+    <Content Include="images\עכבר.jpg" />
     <Content Include="requirements.txt" />
     <Content Include="unit10\dataB1W3Ex2.xlsx" />
     <Content Include="unit10\datasets\cat_nocat\test_catvnoncat.h5" />
@@ -71,6 +108,7 @@
     <Content Include="unit10\__pycache__\c2w2_utils.cpython-36.pyc" />
   </ItemGroup>
   <ItemGroup>
+    <Folder Include="images\" />
     <Folder Include="unit10\" />
     <Folder Include="unit10\datasets\" />
     <Folder Include="unit10\datasets\cat_nocat\" />

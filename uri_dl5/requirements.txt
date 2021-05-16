@@ -2,3 +2,5 @@ NumPy
 matplotlib
 h5py
 sympy
+cupy-cuda112
+sklearn
